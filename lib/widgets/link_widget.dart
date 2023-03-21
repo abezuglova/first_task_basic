@@ -8,14 +8,18 @@ class LinkWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     final textTheme = Theme.of(context).textTheme;
     return Container(
-      height: 44,
+      padding: const EdgeInsets.symmetric(vertical: 11),
       color: Colors.white,
       child: Center(
         child: Row(
           mainAxisSize: MainAxisSize.min,
           children: [
             const Image(image: AssetImage(AppImages.logo)),
-            Text('Смотреть на Avito', style: textTheme.bodyMedium,),
+            const SizedBox(width: 10),
+            Text(
+              'Смотреть на Avito',
+              style: textTheme.bodyMedium,
+            ),
           ],
         ),
       ),

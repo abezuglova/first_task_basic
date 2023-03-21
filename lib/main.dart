@@ -11,27 +11,67 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    const linkColor = Color(0xFF007AFF);
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
+        primaryColor: linkColor,
         appBarTheme: const AppBarTheme(
           backgroundColor: Colors.white,
           foregroundColor: Colors.black,
         ),
         iconTheme: const IconThemeData(
-          color: Color(0xFF007AFF),
+          color: linkColor,
         ),
         textTheme:
             GoogleFonts.openSansTextTheme(Theme.of(context).textTheme).copyWith(
-          bodySmall: const TextStyle(fontWeight: FontWeight.normal, fontSize: 12, color: Colors.black),
-          bodyMedium: const TextStyle(fontWeight: FontWeight.normal, fontSize: 15, color: Colors.black),
-          bodyLarge: const TextStyle(fontWeight: FontWeight.normal, fontSize: 16, color: Colors.black),
-          headlineSmall: const TextStyle(fontWeight: FontWeight.normal, fontSize: 18, color: Colors.black),
-          headlineMedium: const TextStyle(fontWeight: FontWeight.normal, fontSize: 9, color: Colors.black),
-          headlineLarge: const TextStyle(fontWeight: FontWeight.bold, fontSize: 18, color: Colors.black),
-          titleSmall: const TextStyle(fontWeight: FontWeight.normal, fontSize: 13, color: Colors.black),
-          titleMedium: const TextStyle(fontWeight: FontWeight.w600, fontSize: 16, color: Colors.black),
-          titleLarge: const TextStyle(fontWeight: FontWeight.w600, fontSize: 17, color: Colors.black),
+          bodySmall: const TextStyle(
+            fontWeight: FontWeight.normal,
+            fontSize: 12,
+            color: Colors.black,
+            letterSpacing: 0.35,
+            height: 16.8 / 12,
+          ),
+          bodyMedium: const TextStyle(
+            fontWeight: FontWeight.normal,
+            fontSize: 15,
+            color: Colors.black,
+          ),
+          bodyLarge: const TextStyle(
+            fontWeight: FontWeight.normal,
+            fontSize: 16,
+            color: Colors.black,
+          ),
+          headlineSmall: const TextStyle(
+            fontWeight: FontWeight.normal,
+            fontSize: 18,
+            color: Colors.black,
+          ),
+          headlineMedium: const TextStyle(
+            fontWeight: FontWeight.normal,
+            fontSize: 9,
+            color: Colors.black,
+          ),
+          headlineLarge: const TextStyle(
+            fontWeight: FontWeight.bold,
+            fontSize: 18,
+            color: Colors.black,
+          ),
+          titleSmall: const TextStyle(
+            fontWeight: FontWeight.normal,
+            fontSize: 13,
+            color: Colors.black,
+          ),
+          titleMedium: const TextStyle(
+            fontWeight: FontWeight.w600,
+            fontSize: 16,
+            color: Colors.black,
+          ),
+          titleLarge: const TextStyle(
+            fontWeight: FontWeight.w600,
+            fontSize: 17,
+            color: Colors.black,
+          ),
         ),
       ),
       home: const OfferScreenWidget(),

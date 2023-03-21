@@ -11,7 +11,11 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
         color: Colors.white,
         child: Stack(
           children: [
-            Center(child: Text('Предложение', style: textTheme.titleLarge)),
+            Center(
+                child: Text(
+              'Предложение',
+              style: textTheme.titleLarge,
+            )),
             Positioned(
               right: 0,
               child: Row(
