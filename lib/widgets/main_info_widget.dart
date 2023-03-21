@@ -1,3 +1,4 @@
+import 'package:first_task_basic/assets/app_images.dart';
 import 'package:flutter/material.dart';
 
 class MainInfoWidget extends StatelessWidget {
@@ -7,7 +8,6 @@ class MainInfoWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     final textTheme = Theme.of(context).textTheme;
     return Container(
-      height: 109,
       color: Colors.white,
       padding: const EdgeInsets.fromLTRB(16, 12, 16, 15),
       child: Column(
@@ -17,9 +17,11 @@ class MainInfoWidget extends StatelessWidget {
             'Квартира-студия, 40м, 16/23 эт.',
             style: textTheme.headlineSmall,
           ),
+          const SizedBox(height: 2),
           Row(
             children: [
-              const Icon(Icons.location_on_outlined),
+              const Image(image: AssetImage(AppImages.locationIcon)),
+              const SizedBox(width: 4),
               Text(
                 'Центр (Кировский р-н.), Очаковская, 39',
                 style: textTheme.titleSmall!

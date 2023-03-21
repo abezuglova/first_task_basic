@@ -1,3 +1,4 @@
+import 'package:first_task_basic/assets/app_images.dart';
 import 'package:flutter/material.dart';
 
 class DescriptionWidget extends StatelessWidget {
@@ -24,7 +25,8 @@ class DescriptionWidget extends StatelessWidget {
           const SizedBox(height: 7),
           Row(
             children: [
-              const Icon(Icons.keyboard_arrow_down),
+              const Image(image: AssetImage(AppImages.chevronDownIcon)),
+              const SizedBox(width: 4),
               Text(
                 'Подробнее',
                 style: textTheme.bodySmall!.copyWith(color: Theme.of(context).primaryColor),

@@ -49,6 +49,7 @@ class MyApp extends StatelessWidget {
             fontWeight: FontWeight.normal,
             fontSize: 18,
             color: Colors.black,
+            height: 25 / 18,
           ),
           headlineMedium: const TextStyle(
             fontWeight: FontWeight.normal,
@@ -64,6 +65,7 @@ class MyApp extends StatelessWidget {
             fontWeight: FontWeight.normal,
             fontSize: 13,
             color: Colors.black,
+            height: 18 / 13,
           ),
           titleMedium: const TextStyle(
             fontWeight: FontWeight.w600,

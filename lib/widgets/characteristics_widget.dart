@@ -1,3 +1,4 @@
+import 'package:first_task_basic/assets/app_images.dart';
 import 'package:flutter/material.dart';
 
 class CharacteristicsWidget extends StatelessWidget {
@@ -28,7 +29,8 @@ class CharacteristicsWidget extends StatelessWidget {
             children: [
               Row(
                 children: [
-                  const Icon(Icons.square_outlined),
+                  const Image(image: AssetImage(AppImages.planningIcon)),
+                  const SizedBox(width: 10),
                   Text(
                     'Планировка',
                     style: textTheme.bodyMedium,
@@ -52,7 +54,8 @@ class CharacteristicsWidget extends StatelessWidget {
             children: [
               Row(
                 children: [
-                  const Icon(Icons.square_outlined),
+                  const Image(image: AssetImage(AppImages.ceilingIcon)),
+                  const SizedBox(width: 10),
                   Text(
                     'Высота потолков',
                     style: textTheme.bodyMedium,
@@ -76,7 +79,8 @@ class CharacteristicsWidget extends StatelessWidget {
             children: [
               Row(
                 children: [
-                  const Icon(Icons.square_outlined),
+                  const Image(image: AssetImage(AppImages.repairIcon)),
+                  const SizedBox(width: 10),
                   Text(
                     'Ремонт',
                     style: textTheme.bodyMedium,
@@ -97,7 +101,8 @@ class CharacteristicsWidget extends StatelessWidget {
           const SizedBox(height: 7),
           Row(
             children: [
-              const Icon(Icons.keyboard_arrow_down),
+              const Image(image: AssetImage(AppImages.chevronDownIcon)),
+              const SizedBox(width: 4),
               Text(
                 'Подробнее',
                 style: textTheme.bodySmall!

@@ -1,3 +1,4 @@
+import 'package:first_task_basic/assets/app_images.dart';
 import 'package:flutter/material.dart';
 
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
@@ -17,15 +18,12 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
               style: textTheme.titleLarge,
             )),
             Positioned(
-              right: 0,
+              right: 9,
               child: Row(
                 children: const [
-                  Icon(
-                    Icons.file_download_outlined,
-                  ),
-                  Icon(
-                    Icons.more_horiz,
-                  ),
+                  Image(image: AssetImage(AppImages.fileDownloadIcon)),
+                  SizedBox(width: 15),
+                  Image(image: AssetImage(AppImages.moreIcon)),
                 ],
               ),
             ),
