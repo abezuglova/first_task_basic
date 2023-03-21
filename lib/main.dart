@@ -23,14 +23,15 @@ class MyApp extends StatelessWidget {
         ),
         textTheme:
             GoogleFonts.openSansTextTheme(Theme.of(context).textTheme).copyWith(
-          bodySmall: const TextStyle(fontWeight: FontWeight.normal, fontSize: 12),
-          bodyMedium: const TextStyle(fontWeight: FontWeight.normal, fontSize: 15),
-          bodyLarge: const TextStyle(fontWeight: FontWeight.normal, fontSize: 16),
-          headlineSmall: const TextStyle(fontWeight: FontWeight.normal, fontSize: 18),
-          headlineLarge: const TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
-          titleSmall: const TextStyle(fontWeight: FontWeight.normal, fontSize: 13),
-          titleMedium: const TextStyle(fontWeight: FontWeight.w600, fontSize: 16),
-          titleLarge: const TextStyle(fontWeight: FontWeight.w600, fontSize: 17),
+          bodySmall: const TextStyle(fontWeight: FontWeight.normal, fontSize: 12, color: Colors.black),
+          bodyMedium: const TextStyle(fontWeight: FontWeight.normal, fontSize: 15, color: Colors.black),
+          bodyLarge: const TextStyle(fontWeight: FontWeight.normal, fontSize: 16, color: Colors.black),
+          headlineSmall: const TextStyle(fontWeight: FontWeight.normal, fontSize: 18, color: Colors.black),
+          headlineMedium: const TextStyle(fontWeight: FontWeight.normal, fontSize: 9, color: Colors.black),
+          headlineLarge: const TextStyle(fontWeight: FontWeight.bold, fontSize: 18, color: Colors.black),
+          titleSmall: const TextStyle(fontWeight: FontWeight.normal, fontSize: 13, color: Colors.black),
+          titleMedium: const TextStyle(fontWeight: FontWeight.w600, fontSize: 16, color: Colors.black),
+          titleLarge: const TextStyle(fontWeight: FontWeight.w600, fontSize: 17, color: Colors.black),
         ),
       ),
       home: const OfferScreenWidget(),
@@ -52,3 +53,4 @@ class MyApp extends StatelessWidget {
 
 // 3 часа
 // 30 минут
+// 15:10

@@ -11,6 +11,7 @@ class PhotoSliderWidget extends StatefulWidget {
 class _PhotoSliderWidgetState extends State<PhotoSliderWidget> {
   @override
   Widget build(BuildContext context) {
+    final textTheme = Theme.of(context).textTheme;
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 16),
       child: Stack(
@@ -22,11 +23,9 @@ class _PhotoSliderWidgetState extends State<PhotoSliderWidget> {
           ),
           Container(
             color: Colors.black.withOpacity(0.6),
-            child: const Text(
+            child: Text(
               '1/5',
-              style: TextStyle(
-                color: Colors.white,
-              ),
+              style: textTheme.headlineMedium!.copyWith(color: Colors.white),
             ),
           ),
         ],

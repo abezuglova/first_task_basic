@@ -5,6 +5,7 @@ class CharacteristicsWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final textTheme = Theme.of(context).textTheme;
     return Container(
       height: 233,
       padding: const EdgeInsets.all(16),
@@ -12,18 +13,18 @@ class CharacteristicsWidget extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const Text('Характеристики'),
-          const Text('Об объекте'),
+          Text('Характеристики', style: textTheme.headlineLarge),
+          Text('Об объекте', style: textTheme.bodySmall),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Row(
-                children: const [
-                  Icon(Icons.square_outlined),
-                  Text('Планировка'),
+                children: [
+                  const Icon(Icons.square_outlined),
+                  Text('Планировка', style: textTheme.bodyMedium),
                 ],
               ),
-              const Text('Смежная'),
+              Text('Смежная', style: textTheme.bodyLarge),
             ],
           ),
           Container(
@@ -34,12 +35,12 @@ class CharacteristicsWidget extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Row(
-                children: const [
-                  Icon(Icons.square_outlined),
-                  Text('Высота потолков'),
+                children: [
+                  const Icon(Icons.square_outlined),
+                  Text('Высота потолков', style: textTheme.bodyMedium),
                 ],
               ),
-              const Text('От 2,5 м'),
+              Text('От 2,5 м', style: textTheme.bodyLarge),
             ],
           ),
           Container(
@@ -50,12 +51,12 @@ class CharacteristicsWidget extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Row(
-                children: const [
-                  Icon(Icons.square_outlined),
-                  Text('Ремонт'),
+                children: [
+                  const Icon(Icons.square_outlined),
+                  Text('Ремонт', style: textTheme.bodyMedium),
                 ],
               ),
-              const Text('Без ремонта'),
+              Text('Без ремонта', style: textTheme.bodyLarge),
             ],
           ),
           Container(
@@ -63,9 +64,9 @@ class CharacteristicsWidget extends StatelessWidget {
             color: const Color(0xFF3C3C43).withOpacity(0.6),
           ),
           Row(
-            children: const [
-              Icon(Icons.keyboard_arrow_down),
-              Text('Подробнее'),
+            children: [
+              const Icon(Icons.keyboard_arrow_down),
+              Text('Подробнее', style: textTheme.bodySmall),
             ],
           ),
         ],

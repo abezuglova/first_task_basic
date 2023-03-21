@@ -5,6 +5,7 @@ class DescriptionWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final textTheme = Theme.of(context).textTheme;
     return Container(
       height: 186,
       padding: const EdgeInsets.all(16),
@@ -12,13 +13,15 @@ class DescriptionWidget extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const Text('Описание'),
-          const Text(
-              'Дом расположен в ЗЖМ, мкр Левенцовский, вблизи остановки общественного транспорта. Рядом расположены гипермаркеты "Магнит", "Пятерочка", "Лента", "Метро", отделение "Сбербанка". В районе работают 6 детских садов, 1 школа. Есть собственная управляющая компания.'),
+          Text('Описание', style: textTheme.headlineLarge),
+          Text(
+            'Дом расположен в ЗЖМ, мкр Левенцовский, вблизи остановки общественного транспорта. Рядом расположены гипермаркеты "Магнит", "Пятерочка", "Лента", "Метро", отделение "Сбербанка". В районе работают 6 детских садов, 1 школа. Есть собственная управляющая компания.',
+            style: textTheme.bodySmall,
+          ),
           Row(
-            children: const [
-              Icon(Icons.keyboard_arrow_down),
-              Text('Подробнее'),
+            children: [
+              const Icon(Icons.keyboard_arrow_down),
+              Text('Подробнее', style: textTheme.bodySmall,),
             ],
           ),
         ],

@@ -5,6 +5,7 @@ class MainInfoWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final textTheme = Theme.of(context).textTheme;
     return Container(
       height: 109,
       color: Colors.white,
@@ -12,16 +13,16 @@ class MainInfoWidget extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const Text('Квартира-студия, 40м, 16/23 эт.'),
+          Text('Квартира-студия, 40м, 16/23 эт.', style: textTheme.headlineSmall,),
           Row(
-            children: const [
-              Icon(Icons.location_on_outlined),
-              Text('Центр (Кировский р-н.), Очаковская, 39'),
+            children: [
+              const Icon(Icons.location_on_outlined),
+              Text('Центр (Кировский р-н.), Очаковская, 39', style: textTheme.titleSmall),
             ],
           ),
           Container(
             color: const Color(0xFFF9E000),
-            child: const Text('2,3 млн ₽'),
+            child: Text('2,3 млн ₽', style: textTheme.titleMedium,),
           ),
         ],
       ),
