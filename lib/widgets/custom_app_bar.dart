@@ -1,3 +1,5 @@
+import 'dart:js';
+
 import 'package:flutter/material.dart';
 
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
@@ -5,12 +7,13 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
 
   @override
   Widget build(BuildContext context) {
+    final textTheme = Theme.of(context).textTheme;
     return SafeArea(
       child: ColoredBox(
         color: Colors.white,
         child: Stack(
           children: [
-            const Center(child: Text('Предложение')),
+            Center(child: Text('Предложение', style: textTheme.titleLarge)),
             Positioned(
               right: 0,
               child: Row(
