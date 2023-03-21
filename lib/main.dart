@@ -23,6 +23,9 @@ class MyApp extends StatelessWidget {
         iconTheme: const IconThemeData(
           color: linkColor,
         ),
+        textButtonTheme: TextButtonThemeData(
+          style: TextButton.styleFrom(padding: EdgeInsets.zero),
+        ),
         textTheme:
             GoogleFonts.openSansTextTheme(Theme.of(context).textTheme).copyWith(
           bodySmall: const TextStyle(
@@ -93,4 +96,4 @@ class MyApp extends StatelessWidget {
 
 // 3 часа
 // 30 минут
-// 15:10
+// 1 час 16:10
