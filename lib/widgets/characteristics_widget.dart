@@ -1,5 +1,6 @@
 import 'package:first_task_basic/assets/app_images.dart';
 import 'package:first_task_basic/widgets/details_button_widget.dart';
+import 'package:first_task_basic/widgets/divider_widget.dart';
 import 'package:flutter/material.dart';
 
 class CharacteristicsWidget extends StatelessWidget {
@@ -21,8 +22,11 @@ class CharacteristicsWidget extends StatelessWidget {
           const SizedBox(height: 11),
           Text(
             'Об объекте',
-            style: textTheme.bodySmall!
-                .copyWith(color: const Color(0x003c3c43).withOpacity(0.6)),
+            style: textTheme.bodySmall!.copyWith(
+              color: const Color(0x003c3c43).withOpacity(0.6),
+              height: 16 / 12,
+              letterSpacing: 0,
+            ),
           ),
           const SizedBox(height: 11),
           Row(
@@ -45,13 +49,11 @@ class CharacteristicsWidget extends StatelessWidget {
             ],
           ),
           const SizedBox(height: 11),
-          Container(
-            height: 0.1,
-            color: const Color(0xFF3C3C43).withOpacity(0.6),
-          ),
+          const DividerWidget(),
           const SizedBox(height: 11),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Row(
                 children: [
@@ -70,10 +72,7 @@ class CharacteristicsWidget extends StatelessWidget {
             ],
           ),
           const SizedBox(height: 11),
-          Container(
-            height: 0.1,
-            color: const Color(0xFF3C3C43).withOpacity(0.6),
-          ),
+          const DividerWidget(),
           const SizedBox(height: 11),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -95,10 +94,7 @@ class CharacteristicsWidget extends StatelessWidget {
             ],
           ),
           const SizedBox(height: 11),
-          Container(
-            height: 0.1,
-            color: const Color(0xFF3C3C43).withOpacity(0.6),
-          ),
+          const DividerWidget(),
           const SizedBox(height: 7),
           const DetailsButtonWidget(),
         ],
