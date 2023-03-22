@@ -1,6 +1,5 @@
 import 'package:first_task_basic/assets/app_images.dart';
 import 'package:first_task_basic/widgets/details_button_widget.dart';
-import 'package:first_task_basic/widgets/divider_widget.dart';
 import 'package:flutter/material.dart';
 
 class CharacteristicsWidget extends StatelessWidget {
@@ -49,11 +48,10 @@ class CharacteristicsWidget extends StatelessWidget {
             ],
           ),
           const SizedBox(height: 11),
-          const DividerWidget(),
+          const Divider(),
           const SizedBox(height: 11),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Row(
                 children: [
@@ -72,7 +70,7 @@ class CharacteristicsWidget extends StatelessWidget {
             ],
           ),
           const SizedBox(height: 11),
-          const DividerWidget(),
+          const Divider(),
           const SizedBox(height: 11),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -94,7 +92,7 @@ class CharacteristicsWidget extends StatelessWidget {
             ],
           ),
           const SizedBox(height: 11),
-          const DividerWidget(),
+          const Divider(),
           const SizedBox(height: 7),
           const DetailsButtonWidget(),
         ],

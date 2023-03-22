@@ -12,6 +12,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     const linkColor = Color(0xFF007AFF);
+    const dividerColor = Color(0xFFC6C6C8);
     return MaterialApp(
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
@@ -20,6 +21,11 @@ class MyApp extends StatelessWidget {
         appBarTheme: const AppBarTheme(
           backgroundColor: Colors.white,
           foregroundColor: Colors.black,
+        ),
+        dividerTheme: const DividerThemeData(
+          color: dividerColor,
+          thickness: 0.5,
+          space: 0,
         ),
         iconTheme: const IconThemeData(
           color: linkColor,
@@ -76,12 +82,11 @@ class MyApp extends StatelessWidget {
             letterSpacing: 1.59,
           ),
           headlineLarge: const TextStyle(
-            fontWeight: FontWeight.bold,
-            fontSize: 18,
-            color: Colors.black,
-            height: 15 / 18,
-            letterSpacing: 0.35
-          ),
+              fontWeight: FontWeight.bold,
+              fontSize: 18,
+              color: Colors.black,
+              height: 15 / 18,
+              letterSpacing: 0.35),
           titleSmall: const TextStyle(
             fontWeight: FontWeight.normal,
             fontSize: 13,
