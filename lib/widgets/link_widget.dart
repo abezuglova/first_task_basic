@@ -9,23 +9,25 @@ class LinkWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     final textTheme = Theme.of(context).textTheme;
 
-    return Container(
-      padding: const EdgeInsets.symmetric(vertical: 11),
+    return Material(
       color: Colors.white,
-      child: Center(
-        child: Row(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            const Image(image: AssetImage(AppImages.logo)),
-            const SizedBox(width: 10),
-            TextButton(
-              onPressed: _launchUrl,
-              child: Text(
-                'Смотреть на Avito',
-                style: textTheme.bodyMedium,
-              ),
+      child: InkWell(
+        onTap: _launchUrl,
+        child: Container(
+          padding: const EdgeInsets.symmetric(vertical: 11),
+          child: Center(
+            child: Row(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                const Image(image: AssetImage(AppImages.logo)),
+                const SizedBox(width: 10),
+                Text(
+                  'Смотреть на Avito',
+                  style: textTheme.bodyMedium,
+                ),
+              ],
             ),
-          ],
+          ),
         ),
       ),
     );
