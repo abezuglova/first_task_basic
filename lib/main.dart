@@ -35,7 +35,6 @@ class MyApp extends StatelessWidget {
             foregroundColor: AppColors.buttonColor,
             tapTargetSize: MaterialTapTargetSize.shrinkWrap,
             textStyle: const TextStyle(
-              fontFamily: 'OpenSans',
               fontSize: 12,
               height: 22 / 12,
               letterSpacing: -0.41,

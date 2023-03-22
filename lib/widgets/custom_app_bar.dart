@@ -1,5 +1,6 @@
-import 'package:first_task_basic/assets/app_images.dart';
+import 'package:first_task_basic/assets/app_icons.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   const CustomAppBar({super.key});
@@ -26,13 +27,12 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
                 children: [
                   TextButton(
                     onPressed: () {},
-                    child: const Image(
-                        image: AssetImage(AppImages.fileDownloadIcon)),
+                    child: SvgPicture.asset(AppIcons.fileDownloadIcon),
                   ),
                   const SizedBox(width: 15),
                   TextButton(
                     onPressed: () {},
-                    child: const Image(image: AssetImage(AppImages.moreIcon)),
+                    child: SvgPicture.asset(AppIcons.moreIcon),
                   ),
                 ],
               ),

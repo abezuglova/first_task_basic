@@ -1,6 +1,7 @@
 import 'package:first_task_basic/assets/app_colors.dart';
-import 'package:first_task_basic/assets/app_images.dart';
+import 'package:first_task_basic/assets/app_icons.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class MainInfoWidget extends StatelessWidget {
   const MainInfoWidget({super.key});
@@ -21,7 +22,7 @@ class MainInfoWidget extends StatelessWidget {
           const SizedBox(height: 2),
           Row(
             children: [
-              const Image(image: AssetImage(AppImages.locationIcon)),
+              SvgPicture.asset(AppIcons.locationIcon),
               const SizedBox(width: 4),
               Text(
                 'Центр (Кировский р-н.), Очаковская, 39',

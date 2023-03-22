@@ -1,4 +1,5 @@
 import 'package:first_task_basic/assets/app_colors.dart';
+import 'package:first_task_basic/assets/app_icons.dart';
 import 'package:first_task_basic/assets/app_images.dart';
 import 'package:first_task_basic/widgets/characteristic_row_widget.dart';
 import 'package:first_task_basic/widgets/details_button_widget.dart';
@@ -31,7 +32,7 @@ class CharacteristicsWidget extends StatelessWidget {
           ),
           const SizedBox(height: 11),
           const CharacteristicRowWidget(
-            iconName: AppImages.planningIcon,
+            iconName: AppIcons.planningIcon,
             characteristicName: 'Планировка',
             characteristicValue: 'Смежная',
           ),
@@ -39,7 +40,7 @@ class CharacteristicsWidget extends StatelessWidget {
           const Divider(),
           const SizedBox(height: 11),
           const CharacteristicRowWidget(
-            iconName: AppImages.ceilingIcon,
+            iconName: AppIcons.ceilingIcon,
             characteristicName: 'Высота потолков',
             characteristicValue: 'От 2,5 м',
           ),
@@ -47,7 +48,7 @@ class CharacteristicsWidget extends StatelessWidget {
           const Divider(),
           const SizedBox(height: 11),
           const CharacteristicRowWidget(
-            iconName: AppImages.repairIcon,
+            iconName: AppIcons.repairIcon,
             characteristicName: 'Ремонт',
             characteristicValue: 'Без ремонта',
           ),

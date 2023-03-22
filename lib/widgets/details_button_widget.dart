@@ -1,5 +1,6 @@
-import 'package:first_task_basic/assets/app_images.dart';
+import 'package:first_task_basic/assets/app_icons.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 
 class DetailsButtonWidget extends StatelessWidget {
   const DetailsButtonWidget({super.key});
@@ -11,10 +12,10 @@ class DetailsButtonWidget extends StatelessWidget {
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisSize: MainAxisSize.min,
-        children: const [
-          Image(image: AssetImage(AppImages.chevronDownIcon)),
-          SizedBox(width: 4),
-          Text(
+        children: [
+          SvgPicture.asset(AppIcons.chevronDownIcon),
+          const SizedBox(width: 4),
+          const Text(
             'Подробнее',
           ),
         ],
