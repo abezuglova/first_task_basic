@@ -14,6 +14,7 @@ class MyApp extends StatelessWidget {
     const linkColor = Color(0xFF007AFF);
     return MaterialApp(
       title: 'Flutter Demo',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primaryColor: linkColor,
         appBarTheme: const AppBarTheme(
@@ -24,7 +25,17 @@ class MyApp extends StatelessWidget {
           color: linkColor,
         ),
         textButtonTheme: TextButtonThemeData(
-          style: TextButton.styleFrom(padding: EdgeInsets.zero),
+          style: TextButton.styleFrom(
+            padding: EdgeInsets.zero,
+            minimumSize: Size.zero,
+            foregroundColor: linkColor,
+            tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+            textStyle: const TextStyle(
+              fontFamily: 'OpenSans',
+              fontSize: 12,
+              height: 22 / 12,
+            ),
+          ),
         ),
         textTheme:
             GoogleFonts.openSansTextTheme(Theme.of(context).textTheme).copyWith(
@@ -87,15 +98,8 @@ class MyApp extends StatelessWidget {
 
 // Соответствие 1в1 дизайну при запуске на эмуляторе Pixel4 с разрешением 1080x2280
 // Применить библиотеку ScreenUtil
-// Применить библиотеку url_launcher
+// DONE Применить библиотеку url_launcher
 // DONE Версия Flutter 3.7.7 
 // DONE Оформить код в репозитории на личном GitHub
 // DONE Обратить внимание на комментарии в дизайне
 // DONE Разбить UI на отдельные виджеты (под каждый виджет отдельный файл)
-
-
-
-
-// 3 часа
-// 30 минут
-// 1 час 16:10

@@ -1,4 +1,5 @@
 import 'package:first_task_basic/assets/app_images.dart';
+import 'package:first_task_basic/widgets/details_button_widget.dart';
 import 'package:flutter/material.dart';
 
 class CharacteristicsWidget extends StatelessWidget {
@@ -99,17 +100,7 @@ class CharacteristicsWidget extends StatelessWidget {
             color: const Color(0xFF3C3C43).withOpacity(0.6),
           ),
           const SizedBox(height: 7),
-          Row(
-            children: [
-              const Image(image: AssetImage(AppImages.chevronDownIcon)),
-              const SizedBox(width: 4),
-              Text(
-                'Подробнее',
-                style: textTheme.bodySmall!
-                    .copyWith(color: Theme.of(context).primaryColor),
-              ),
-            ],
-          ),
+          const DetailsButtonWidget(),
         ],
       ),
     );

@@ -18,12 +18,22 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
               style: textTheme.titleLarge,
             )),
             Positioned(
+              top: 9,
               right: 9,
               child: Row(
-                children: const [
-                  Image(image: AssetImage(AppImages.fileDownloadIcon)),
-                  SizedBox(width: 15),
-                  Image(image: AssetImage(AppImages.moreIcon)),
+                crossAxisAlignment: CrossAxisAlignment.center,
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  TextButton(
+                    onPressed: () {},
+                    child: const Image(
+                        image: AssetImage(AppImages.fileDownloadIcon)),
+                  ),
+                  const SizedBox(width: 15),
+                  TextButton(
+                    onPressed: () {},
+                    child: const Image(image: AssetImage(AppImages.moreIcon)),
+                  ),
                 ],
               ),
             ),

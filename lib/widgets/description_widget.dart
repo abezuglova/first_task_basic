@@ -1,4 +1,4 @@
-import 'package:first_task_basic/assets/app_images.dart';
+import 'package:first_task_basic/widgets/details_button_widget.dart';
 import 'package:flutter/material.dart';
 
 class DescriptionWidget extends StatelessWidget {
@@ -23,16 +23,7 @@ class DescriptionWidget extends StatelessWidget {
             style: textTheme.bodySmall,
           ),
           const SizedBox(height: 7),
-          Row(
-            children: [
-              const Image(image: AssetImage(AppImages.chevronDownIcon)),
-              const SizedBox(width: 4),
-              Text(
-                'Подробнее',
-                style: textTheme.bodySmall!.copyWith(color: Theme.of(context).primaryColor),
-              ),
-            ],
-          ),
+          const DetailsButtonWidget(),
         ],
       ),
     );
