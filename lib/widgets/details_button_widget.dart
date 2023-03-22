@@ -10,7 +10,6 @@ class DetailsButtonWidget extends StatelessWidget {
     return TextButton(
       onPressed: () {},
       child: Row(
-        crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisSize: MainAxisSize.min,
         children: [
           SvgPicture.asset(AppIcons.chevronDownIcon),

@@ -36,7 +36,6 @@ class MyApp extends StatelessWidget {
             tapTargetSize: MaterialTapTargetSize.shrinkWrap,
             textStyle: const TextStyle(
               fontSize: 12,
-              height: 22 / 12,
               letterSpacing: -0.41,
             ),
           ),

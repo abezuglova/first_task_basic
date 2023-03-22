@@ -22,7 +22,7 @@ class DescriptionWidget extends StatelessWidget {
             'Дом расположен в ЗЖМ, мкр Левенцовский, вблизи остановки общественного транспорта. Рядом расположены гипермаркеты "Магнит", "Пятерочка", "Лента", "Метро", отделение "Сбербанка". В районе работают 6 детских садов, 1 школа. Есть собственная управляющая компания.',
             style: textTheme.bodySmall,
           ),
-          const SizedBox(height: 7),
+          const SizedBox(height: 10),
           const DetailsButtonWidget(),
         ],
       ),

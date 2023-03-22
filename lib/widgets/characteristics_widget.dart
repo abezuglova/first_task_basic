@@ -54,7 +54,7 @@ class CharacteristicsWidget extends StatelessWidget {
           ),
           const SizedBox(height: 11),
           const Divider(),
-          const SizedBox(height: 7),
+          const SizedBox(height: 10),
           const DetailsButtonWidget(),
         ],
       ),
