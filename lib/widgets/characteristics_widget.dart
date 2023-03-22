@@ -1,4 +1,5 @@
 import 'package:first_task_basic/assets/app_images.dart';
+import 'package:first_task_basic/widgets/characteristic_row_widget.dart';
 import 'package:first_task_basic/widgets/details_button_widget.dart';
 import 'package:flutter/material.dart';
 
@@ -28,68 +29,26 @@ class CharacteristicsWidget extends StatelessWidget {
             ),
           ),
           const SizedBox(height: 11),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Row(
-                children: [
-                  const Image(image: AssetImage(AppImages.planningIcon)),
-                  const SizedBox(width: 10),
-                  Text(
-                    'Планировка',
-                    style: textTheme.bodyMedium,
-                  ),
-                ],
-              ),
-              Text(
-                'Смежная',
-                style: textTheme.bodyLarge,
-              ),
-            ],
+          const CharacteristicRowWidget(
+            iconName: AppImages.planningIcon,
+            characteristicName: 'Планировка',
+            characteristicValue: 'Смежная',
           ),
           const SizedBox(height: 11),
           const Divider(),
           const SizedBox(height: 11),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Row(
-                children: [
-                  const Image(image: AssetImage(AppImages.ceilingIcon)),
-                  const SizedBox(width: 10),
-                  Text(
-                    'Высота потолков',
-                    style: textTheme.bodyMedium,
-                  ),
-                ],
-              ),
-              Text(
-                'От 2,5 м',
-                style: textTheme.bodyLarge,
-              ),
-            ],
+          const CharacteristicRowWidget(
+            iconName: AppImages.ceilingIcon,
+            characteristicName: 'Высота потолков',
+            characteristicValue: 'От 2,5 м',
           ),
           const SizedBox(height: 11),
           const Divider(),
           const SizedBox(height: 11),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Row(
-                children: [
-                  const Image(image: AssetImage(AppImages.repairIcon)),
-                  const SizedBox(width: 10),
-                  Text(
-                    'Ремонт',
-                    style: textTheme.bodyMedium,
-                  ),
-                ],
-              ),
-              Text(
-                'Без ремонта',
-                style: textTheme.bodyLarge,
-              ),
-            ],
+          const CharacteristicRowWidget(
+            iconName: AppImages.repairIcon,
+            characteristicName: 'Ремонт',
+            characteristicValue: 'Без ремонта',
           ),
           const SizedBox(height: 11),
           const Divider(),
