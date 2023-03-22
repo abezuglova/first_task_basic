@@ -1,5 +1,6 @@
 import 'package:first_task_basic/assets/app_icons.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 
 class DetailsButtonWidget extends StatelessWidget {
@@ -13,7 +14,7 @@ class DetailsButtonWidget extends StatelessWidget {
         mainAxisSize: MainAxisSize.min,
         children: [
           SvgPicture.asset(AppIcons.chevronDownIcon),
-          const SizedBox(width: 4),
+          SizedBox(width: 4.w),
           const Text(
             'Подробнее',
           ),

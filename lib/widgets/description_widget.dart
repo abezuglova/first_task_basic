@@ -1,5 +1,6 @@
 import 'package:first_task_basic/widgets/details_button_widget.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class DescriptionWidget extends StatelessWidget {
   const DescriptionWidget({super.key});
@@ -8,7 +9,7 @@ class DescriptionWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     final textTheme = Theme.of(context).textTheme;
     return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 15),
+      padding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 15.h),
       color: Colors.white,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -17,12 +18,12 @@ class DescriptionWidget extends StatelessWidget {
             'Описание',
             style: textTheme.headlineLarge,
           ),
-          const SizedBox(height: 11),
+          SizedBox(height: 11.h),
           Text(
             'Дом расположен в ЗЖМ, мкр Левенцовский, вблизи остановки общественного транспорта. Рядом расположены гипермаркеты "Магнит", "Пятерочка", "Лента", "Метро", отделение "Сбербанка". В районе работают 6 детских садов, 1 школа. Есть собственная управляющая компания.',
             style: textTheme.bodySmall,
           ),
-          const SizedBox(height: 10),
+          SizedBox(height: 10.h),
           const DetailsButtonWidget(),
         ],
       ),

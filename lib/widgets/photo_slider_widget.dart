@@ -1,5 +1,6 @@
 import 'package:first_task_basic/assets/app_images.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class PhotoSliderWidget extends StatefulWidget {
   const PhotoSliderWidget({super.key});
@@ -9,24 +10,48 @@ class PhotoSliderWidget extends StatefulWidget {
 }
 
 class _PhotoSliderWidgetState extends State<PhotoSliderWidget> {
-  static const imagesList = [
-    Image(image: AssetImage(AppImages.firstImage)),
-    Image(image: AssetImage(AppImages.firstImage)),
-    Image(image: AssetImage(AppImages.firstImage)),
-    Image(image: AssetImage(AppImages.firstImage)),
-    Image(image: AssetImage(AppImages.firstImage)),
-  ];
-
   final controller = PageController();
   int index = 0;
-  
+
   @override
   Widget build(BuildContext context) {
+    final imagesList = [
+      Image(
+        image: const AssetImage(AppImages.firstImage),
+        width: 346.w,
+        height: 235.h,
+        fit: BoxFit.fill,
+      ),
+      Image(
+        image: const AssetImage(AppImages.firstImage),
+        width: 346.w,
+        height: 235.h,
+        fit: BoxFit.fill,
+      ),
+      Image(
+        image: const AssetImage(AppImages.firstImage),
+        width: 346.w,
+        height: 235.h,
+        fit: BoxFit.fill,
+      ),
+      Image(
+        image: const AssetImage(AppImages.firstImage),
+        width: 346.w,
+        height: 235.h,
+        fit: BoxFit.fill,
+      ),
+      Image(
+        image: const AssetImage(AppImages.firstImage),
+        width: 346.w,
+        height: 235.h,
+        fit: BoxFit.fill,
+      ),
+    ];
+
     final textTheme = Theme.of(context).textTheme;
-    return Container(
-      width: 346,
-      height: 235,
-      padding: const EdgeInsets.fromLTRB(15, 0, 14, 0),
+    return SizedBox(
+      width: 346.w,
+      height: 235.h,
       child: Stack(
         children: [
           PageView(
@@ -37,13 +62,13 @@ class _PhotoSliderWidgetState extends State<PhotoSliderWidget> {
             children: imagesList,
           ),
           Positioned(
-            left: 162,
-            bottom: 10,
+            left: 162.w,
+            bottom: 10.h,
             child: Container(
-              padding: const EdgeInsets.symmetric(horizontal: 9, vertical: 3),
+              padding: EdgeInsets.symmetric(horizontal: 9.w, vertical: 3.h),
               decoration: BoxDecoration(
                 color: Colors.black.withOpacity(0.6),
-                borderRadius: const BorderRadius.all(Radius.circular(4)),
+                borderRadius: BorderRadius.all(const Radius.circular(4).w),
               ),
               child: Text(
                 '${index + 1}/${imagesList.length}',
@@ -55,6 +80,7 @@ class _PhotoSliderWidgetState extends State<PhotoSliderWidget> {
       ),
     );
   }
+
   @override
   void dispose() {
     controller.dispose();

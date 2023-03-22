@@ -1,9 +1,9 @@
 import 'package:first_task_basic/assets/app_colors.dart';
 import 'package:first_task_basic/assets/app_icons.dart';
-import 'package:first_task_basic/assets/app_images.dart';
 import 'package:first_task_basic/widgets/characteristic_row_widget.dart';
 import 'package:first_task_basic/widgets/details_button_widget.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CharacteristicsWidget extends StatelessWidget {
   const CharacteristicsWidget({super.key});
@@ -12,7 +12,7 @@ class CharacteristicsWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     final textTheme = Theme.of(context).textTheme;
     return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 15),
+      padding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 15.h),
       color: Colors.white,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -21,7 +21,7 @@ class CharacteristicsWidget extends StatelessWidget {
             'Характеристики',
             style: textTheme.headlineLarge,
           ),
-          const SizedBox(height: 11),
+          SizedBox(height: 11.h),
           Text(
             'Об объекте',
             style: textTheme.bodySmall!.copyWith(
@@ -30,31 +30,31 @@ class CharacteristicsWidget extends StatelessWidget {
               letterSpacing: 0,
             ),
           ),
-          const SizedBox(height: 11),
+          SizedBox(height: 11.h),
           const CharacteristicRowWidget(
             iconName: AppIcons.planningIcon,
             characteristicName: 'Планировка',
             characteristicValue: 'Смежная',
           ),
-          const SizedBox(height: 11),
+          SizedBox(height: 11.h),
           const Divider(),
-          const SizedBox(height: 11),
+          SizedBox(height: 11.h),
           const CharacteristicRowWidget(
             iconName: AppIcons.ceilingIcon,
             characteristicName: 'Высота потолков',
             characteristicValue: 'От 2,5 м',
           ),
-          const SizedBox(height: 11),
+          SizedBox(height: 11.h),
           const Divider(),
-          const SizedBox(height: 11),
+          SizedBox(height: 11.h),
           const CharacteristicRowWidget(
             iconName: AppIcons.repairIcon,
             characteristicName: 'Ремонт',
             characteristicValue: 'Без ремонта',
           ),
-          const SizedBox(height: 11),
+          SizedBox(height: 11.h),
           const Divider(),
-          const SizedBox(height: 10),
+          SizedBox(height: 10.h),
           const DetailsButtonWidget(),
         ],
       ),

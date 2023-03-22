@@ -6,6 +6,7 @@ import 'package:first_task_basic/widgets/link_widget.dart';
 import 'package:first_task_basic/widgets/main_info_widget.dart';
 import 'package:first_task_basic/widgets/photo_slider_widget.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class OfferScreenWidget extends StatelessWidget {
   const OfferScreenWidget({super.key});
@@ -15,19 +16,21 @@ class OfferScreenWidget extends StatelessWidget {
     return Scaffold(
       backgroundColor: AppColors.appBackgroundColor,
       appBar: const CustomAppBar(),
-      body: ListView(
-        children: const [
-          SizedBox(height: 19),
-          PhotoSliderWidget(),
-          MainInfoWidget(),
-          SizedBox(height: 10),
-          DescriptionWidget(),
-          SizedBox(height: 10),
-          CharacteristicsWidget(),
-          SizedBox(height: 10),
-          LinkWidget(),
-          SizedBox(height: 16),
-        ],
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            SizedBox(height: 19.h),
+            const PhotoSliderWidget(),
+            const MainInfoWidget(),
+            SizedBox(height: 10.h),
+            const DescriptionWidget(),
+            SizedBox(height: 10.h),
+            const CharacteristicsWidget(),
+            SizedBox(height: 10.h),
+            const LinkWidget(),
+            SizedBox(height: 16.h),
+          ],
+        ),
       ),
     );
   }

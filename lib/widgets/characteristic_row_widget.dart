@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class CharacteristicRowWidget extends StatelessWidget {
@@ -21,7 +22,7 @@ class CharacteristicRowWidget extends StatelessWidget {
         Row(
           children: [
             SvgPicture.asset(iconName),
-            const SizedBox(width: 10),
+            SizedBox(width: 10.w),
             Text(
               characteristicName,
               style: textTheme.bodyMedium,

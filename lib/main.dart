@@ -2,6 +2,7 @@ import 'package:first_task_basic/assets/app_colors.dart';
 import 'package:first_task_basic/screens/offer_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 void main() {
   runApp(const MyApp());
@@ -12,101 +13,108 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        appBarTheme: const AppBarTheme(
-          backgroundColor: Colors.white,
-          foregroundColor: Colors.black,
-        ),
-        dividerTheme: const DividerThemeData(
-          color: AppColors.dividerColor,
-          thickness: 0.5,
-          space: 0,
-        ),
-        iconTheme: const IconThemeData(
-          color: AppColors.buttonColor,
-        ),
-        textButtonTheme: TextButtonThemeData(
-          style: TextButton.styleFrom(
-            padding: EdgeInsets.zero,
-            minimumSize: Size.zero,
-            foregroundColor: AppColors.buttonColor,
-            tapTargetSize: MaterialTapTargetSize.shrinkWrap,
-            textStyle: const TextStyle(
-              fontSize: 12,
-              letterSpacing: -0.41,
+    return ScreenUtilInit(
+      designSize: const Size(375, 812),
+      builder: (context, child) {
+        return MaterialApp(
+          title: 'Flutter Demo',
+          debugShowCheckedModeBanner: false,
+          theme: ThemeData(
+            appBarTheme: const AppBarTheme(
+              backgroundColor: Colors.white,
+              foregroundColor: Colors.black,
             ),
+            dividerTheme: const DividerThemeData(
+              color: AppColors.dividerColor,
+              thickness: 0.5,
+              space: 0,
+            ),
+            iconTheme: const IconThemeData(
+              color: AppColors.buttonColor,
+            ),
+            textButtonTheme: TextButtonThemeData(
+              style: TextButton.styleFrom(
+                padding: EdgeInsets.zero,
+                minimumSize: Size.zero,
+                foregroundColor: AppColors.buttonColor,
+                tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+                textStyle: TextStyle(
+                  fontSize: 12.sp,
+                  letterSpacing: -0.41,
+                ).apply(fontSizeFactor: 1.sp),
+              ),
+            ),
+            textTheme:
+                GoogleFonts.openSansTextTheme(Theme.of(context).textTheme)
+                    .copyWith(
+              bodySmall: TextStyle(
+                fontWeight: FontWeight.normal,
+                fontSize: 12.sp,
+                color: Colors.black,
+                height: 16.8 / 12,
+                letterSpacing: 0.35,
+              ),
+              bodyMedium: TextStyle(
+                fontWeight: FontWeight.normal,
+                fontSize: 15.sp,
+                color: Colors.black,
+                height: 22 / 15,
+                letterSpacing: -0.41,
+              ),
+              bodyLarge: TextStyle(
+                fontWeight: FontWeight.normal,
+                fontSize: 16.sp,
+                color: Colors.black,
+                height: 22 / 16,
+                letterSpacing: -0.41,
+              ),
+              headlineSmall: TextStyle(
+                fontWeight: FontWeight.normal,
+                fontSize: 18.sp,
+                color: Colors.black,
+                height: 25 / 18,
+                letterSpacing: -0.24,
+              ),
+              headlineMedium: TextStyle(
+                fontWeight: FontWeight.normal,
+                fontSize: 9.sp,
+                color: Colors.black,
+                height: 10 / 9,
+                letterSpacing: 1.59,
+              ),
+              headlineLarge: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 18.sp,
+                  color: Colors.black,
+                  height: 15 / 18,
+                  letterSpacing: 0.35),
+              titleSmall: TextStyle(
+                fontWeight: FontWeight.normal,
+                fontSize: 13.sp,
+                color: Colors.black,
+                height: 18 / 13,
+                letterSpacing: -0.08,
+              ),
+              titleMedium: TextStyle(
+                fontWeight: FontWeight.w600,
+                fontSize: 16.sp,
+                color: Colors.black,
+                height: 20 / 16,
+                letterSpacing: -0.24,
+              ),
+              titleLarge: TextStyle(
+                fontWeight: FontWeight.w600,
+                fontSize: 17.sp,
+                color: Colors.black,
+                height: 22 / 17,
+                letterSpacing: -0.41,
+              ),
+            ).apply(fontSizeFactor: 1.sp),
           ),
-        ),
-        textTheme:
-            GoogleFonts.openSansTextTheme(Theme.of(context).textTheme).copyWith(
-          bodySmall: const TextStyle(
-            fontWeight: FontWeight.normal,
-            fontSize: 12,
-            color: Colors.black,
-            height: 16.8 / 12,
-            letterSpacing: 0.35,
-          ),
-          bodyMedium: const TextStyle(
-            fontWeight: FontWeight.normal,
-            fontSize: 15,
-            color: Colors.black,
-            height: 22 / 15,
-            letterSpacing: -0.41,
-          ),
-          bodyLarge: const TextStyle(
-            fontWeight: FontWeight.normal,
-            fontSize: 16,
-            color: Colors.black,
-            height: 22 / 16,
-            letterSpacing: -0.41,
-          ),
-          headlineSmall: const TextStyle(
-            fontWeight: FontWeight.normal,
-            fontSize: 18,
-            color: Colors.black,
-            height: 25 / 18,
-            letterSpacing: -0.24,
-          ),
-          headlineMedium: const TextStyle(
-            fontWeight: FontWeight.normal,
-            fontSize: 9,
-            color: Colors.black,
-            height: 10 / 9,
-            letterSpacing: 1.59,
-          ),
-          headlineLarge: const TextStyle(
-              fontWeight: FontWeight.bold,
-              fontSize: 18,
-              color: Colors.black,
-              height: 15 / 18,
-              letterSpacing: 0.35),
-          titleSmall: const TextStyle(
-            fontWeight: FontWeight.normal,
-            fontSize: 13,
-            color: Colors.black,
-            height: 18 / 13,
-            letterSpacing: -0.08,
-          ),
-          titleMedium: const TextStyle(
-            fontWeight: FontWeight.w600,
-            fontSize: 16,
-            color: Colors.black,
-            height: 20 / 16,
-            letterSpacing: -0.24,
-          ),
-          titleLarge: const TextStyle(
-            fontWeight: FontWeight.w600,
-            fontSize: 17,
-            color: Colors.black,
-            height: 22 / 17,
-            letterSpacing: -0.41,
-          ),
-        ),
-      ),
-      home: const OfferScreenWidget(),
+          home: child,
+        );
+      },
+      child: const OfferScreenWidget(),
     );
   }
 }

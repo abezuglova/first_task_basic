@@ -1,5 +1,6 @@
 import 'package:first_task_basic/assets/app_icons.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
@@ -19,8 +20,8 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
               style: textTheme.titleLarge,
             )),
             Positioned(
-              top: 9,
-              right: 9,
+              top: 9.h,
+              right: 9.w,
               child: Row(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 mainAxisSize: MainAxisSize.min,
@@ -29,7 +30,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
                     onPressed: () {},
                     child: SvgPicture.asset(AppIcons.fileDownloadIcon),
                   ),
-                  const SizedBox(width: 15),
+                  SizedBox(width: 15.w),
                   TextButton(
                     onPressed: () {},
                     child: SvgPicture.asset(AppIcons.moreIcon),
@@ -44,5 +45,5 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   }
 
   @override
-  Size get preferredSize => const Size.fromHeight(36);
+  Size get preferredSize => Size.fromHeight(36.w);
 }

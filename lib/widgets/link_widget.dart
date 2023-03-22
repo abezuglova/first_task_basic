@@ -1,5 +1,6 @@
 import 'package:first_task_basic/assets/app_images.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class LinkWidget extends StatelessWidget {
@@ -14,13 +15,13 @@ class LinkWidget extends StatelessWidget {
       child: InkWell(
         onTap: _launchUrl,
         child: Container(
-          padding: const EdgeInsets.symmetric(vertical: 11),
+          padding: EdgeInsets.symmetric(vertical: 11.h),
           child: Center(
             child: Row(
               mainAxisSize: MainAxisSize.min,
               children: [
                 const Image(image: AssetImage(AppImages.logo)),
-                const SizedBox(width: 10),
+                SizedBox(width: 10.w),
                 Text(
                   'Смотреть на Avito',
                   style: textTheme.bodyMedium,
