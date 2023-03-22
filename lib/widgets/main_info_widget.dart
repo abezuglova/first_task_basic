@@ -31,14 +31,11 @@ class MainInfoWidget extends StatelessWidget {
           ),
           const SizedBox(height: 10),
           Container(
-            width: 82,
-            height: 27,
+            padding: const EdgeInsets.fromLTRB(5, 3, 5, 4),
             color: const Color(0xFFF9E000),
-            child: Center(
-              child: Text(
-                '2,3 млн ₽',
-                style: textTheme.titleMedium,
-              ),
+            child: Text(
+              '2,3 млн ₽',
+              style: textTheme.titleMedium,
             ),
           ),
         ],

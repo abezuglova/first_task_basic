@@ -13,22 +13,32 @@ class _PhotoSliderWidgetState extends State<PhotoSliderWidget> {
   Widget build(BuildContext context) {
     final textTheme = Theme.of(context).textTheme;
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 16),
-      child: Stack(
-        children: [
-          const SizedBox(
-            width: 346,
-            height: 235,
-            child: Image(image: AssetImage(AppImages.firstImage)),
-          ),
-          Container(
-            color: Colors.black.withOpacity(0.6),
-            child: Text(
-              '1/5',
-              style: textTheme.headlineMedium!.copyWith(color: Colors.white),
+      padding: const EdgeInsets.fromLTRB(15, 0, 14, 0),
+      child: Center(
+        child: Stack(
+          children: [
+            const Image(
+              image: AssetImage(AppImages.firstImage),
+              width: 346,
+              height: 235,
             ),
-          ),
-        ],
+            Positioned(
+              left: 162,
+              bottom: 10,
+              child: Container(
+                padding: const EdgeInsets.symmetric(horizontal: 9, vertical: 3),
+                decoration: BoxDecoration(
+                  color: Colors.black.withOpacity(0.6),
+                  borderRadius: const BorderRadius.all(Radius.circular(4)),
+                ),
+                child: Text(
+                  '1/5',
+                  style: textTheme.headlineMedium!.copyWith(color: Colors.white),
+                ),
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
