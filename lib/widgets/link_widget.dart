@@ -20,11 +20,15 @@ class LinkWidget extends StatelessWidget {
             child: Row(
               mainAxisSize: MainAxisSize.min,
               children: [
-                const Image(image: AssetImage(AppImages.logo)),
+                Image(
+                  image: const AssetImage(AppImages.logo),
+                  width: 21.w,
+                  height: 22.h,
+                ),
                 SizedBox(width: 10.w),
                 Text(
                   'Смотреть на Avito',
-                  style: textTheme.bodyMedium,
+                  style: textTheme.bodyMedium!.copyWith(height: 0),
                 ),
               ],
             ),

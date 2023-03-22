@@ -21,7 +21,11 @@ class CharacteristicRowWidget extends StatelessWidget {
       children: [
         Row(
           children: [
-            SvgPicture.asset(iconName),
+            SvgPicture.asset(
+              iconName,
+              width: 16.w,
+              height: 16.h,
+            ),
             SizedBox(width: 10.w),
             Text(
               characteristicName,

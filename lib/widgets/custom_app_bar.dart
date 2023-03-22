@@ -28,12 +28,20 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
                 children: [
                   TextButton(
                     onPressed: () {},
-                    child: SvgPicture.asset(AppIcons.fileDownloadIcon),
+                    child: SvgPicture.asset(
+                      AppIcons.fileDownloadIcon,
+                      width: 18.w,
+                      height: 18.h,
+                    ),
                   ),
                   SizedBox(width: 15.w),
                   TextButton(
                     onPressed: () {},
-                    child: SvgPicture.asset(AppIcons.moreIcon),
+                    child: SvgPicture.asset(
+                      AppIcons.moreIcon,
+                      width: 18.w,
+                      height: 18.h,
+                    ),
                   ),
                 ],
               ),

@@ -20,10 +20,14 @@ class MainInfoWidget extends StatelessWidget {
             'Квартира-студия, 40м, 16/23 эт.',
             style: textTheme.headlineSmall,
           ),
-          SizedBox(height: 2.h),
+          SizedBox(height: 5.h),
           Row(
             children: [
-              SvgPicture.asset(AppIcons.locationIcon),
+              SvgPicture.asset(
+                AppIcons.locationIcon,
+                width: 14.w,
+                height: 14.h,
+              ),
               SizedBox(width: 4.w),
               Text(
                 'Центр (Кировский р-н.), Очаковская, 39',

@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ScreenUtilInit(
-      designSize: const Size(375, 812),
+      designSize: const Size(375, 757),
       builder: (context, child) {
         return MaterialApp(
           title: 'Flutter Demo',
@@ -92,7 +92,6 @@ class MyApp extends StatelessWidget {
                 fontWeight: FontWeight.normal,
                 fontSize: 13.sp,
                 color: Colors.black,
-                height: 18 / 13,
                 letterSpacing: -0.08,
               ),
               titleMedium: TextStyle(

@@ -13,7 +13,11 @@ class DetailsButtonWidget extends StatelessWidget {
       child: Row(
         mainAxisSize: MainAxisSize.min,
         children: [
-          SvgPicture.asset(AppIcons.chevronDownIcon),
+          SvgPicture.asset(
+            AppIcons.chevronDownIcon,
+            width: 16.w,
+            height: 16.h,
+          ),
           SizedBox(width: 4.w),
           const Text(
             'Подробнее',
