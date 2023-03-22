@@ -1,3 +1,4 @@
+import 'package:first_task_basic/assets/app_colors.dart';
 import 'package:first_task_basic/assets/app_images.dart';
 import 'package:first_task_basic/widgets/characteristic_row_widget.dart';
 import 'package:first_task_basic/widgets/details_button_widget.dart';
@@ -23,7 +24,7 @@ class CharacteristicsWidget extends StatelessWidget {
           Text(
             'Об объекте',
             style: textTheme.bodySmall!.copyWith(
-              color: const Color(0x003c3c43).withOpacity(0.6),
+              color: AppColors.characteristicsSubtitleColor.withOpacity(0.6),
               height: 16 / 12,
               letterSpacing: 0,
             ),

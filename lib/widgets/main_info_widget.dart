@@ -1,3 +1,4 @@
+import 'package:first_task_basic/assets/app_colors.dart';
 import 'package:first_task_basic/assets/app_images.dart';
 import 'package:flutter/material.dart';
 
@@ -32,7 +33,7 @@ class MainInfoWidget extends StatelessWidget {
           const SizedBox(height: 10),
           Container(
             padding: const EdgeInsets.fromLTRB(5, 3, 5, 4),
-            color: const Color(0xFFF9E000),
+            color: AppColors.mainInfoPriceColor,
             child: Text(
               '2,3 млн ₽',
               style: textTheme.titleMedium,

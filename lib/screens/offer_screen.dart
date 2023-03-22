@@ -1,3 +1,4 @@
+import 'package:first_task_basic/assets/app_colors.dart';
 import 'package:first_task_basic/widgets/characteristics_widget.dart';
 import 'package:first_task_basic/widgets/custom_app_bar.dart';
 import 'package:first_task_basic/widgets/description_widget.dart';
@@ -12,7 +13,7 @@ class OfferScreenWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xFFFAFAFA),
+      backgroundColor: AppColors.appBackgroundColor,
       appBar: const CustomAppBar(),
       body: ListView(
         children: const [

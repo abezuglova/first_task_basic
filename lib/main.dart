@@ -1,3 +1,4 @@
+import 'package:first_task_basic/assets/app_colors.dart';
 import 'package:first_task_basic/screens/offer_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -11,30 +12,27 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    const linkColor = Color(0xFF007AFF);
-    const dividerColor = Color(0xFFC6C6C8);
     return MaterialApp(
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primaryColor: linkColor,
         appBarTheme: const AppBarTheme(
           backgroundColor: Colors.white,
           foregroundColor: Colors.black,
         ),
         dividerTheme: const DividerThemeData(
-          color: dividerColor,
+          color: AppColors.dividerColor,
           thickness: 0.5,
           space: 0,
         ),
         iconTheme: const IconThemeData(
-          color: linkColor,
+          color: AppColors.buttonColor,
         ),
         textButtonTheme: TextButtonThemeData(
           style: TextButton.styleFrom(
             padding: EdgeInsets.zero,
             minimumSize: Size.zero,
-            foregroundColor: linkColor,
+            foregroundColor: AppColors.buttonColor,
             tapTargetSize: MaterialTapTargetSize.shrinkWrap,
             textStyle: const TextStyle(
               fontFamily: 'OpenSans',
@@ -124,6 +122,5 @@ class MyApp extends StatelessWidget {
 // DONE Обратить внимание на комментарии в дизайне
 // DONE Разбить UI на отдельные виджеты (под каждый виджет отдельный файл)
 
-// 10:00 - 11:40
-// 12:00 - 13:00
-// 13:10 - 
+// 10:00 - 14:00
+// 14:30 - 
