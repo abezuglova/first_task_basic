@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
         statusBarBrightness: Brightness.light,
         statusBarIconBrightness: Brightness.dark,
         systemNavigationBarIconBrightness: Brightness.light,
-        systemNavigationBarColor: Colors.grey,
+        systemNavigationBarColor: Colors.black,
       ),
       child: ScreenUtilInit(
         designSize: const Size(375, 757),
